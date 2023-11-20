@@ -20,6 +20,15 @@ router.post('/projects/add',jwtMiddleware,multerConfig.single('projectImage'),
 projectController.addProjects
 )
 
+// getuserprojects
+router.get('/user/all-projects',jwtMiddleware,projectController.allUserProjects)
+
+// getallprojects
+router.get('/projects/all',jwtMiddleware,projectController.getallProjetcs)
+
+router.get('/projects/home-projects',projectController.getHomeProjects)
+
+
 
 
 // export server
